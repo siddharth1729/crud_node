@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-
+const studentrouter= require("./routes/route");
 
 //########################  Mongodb Atlas Connection  ##########################
 
@@ -17,6 +17,7 @@ client.connect(err => {
     client.close();
 });
 
+app.use('/students',studentrouter)
 
 const port = 8000;
 app.listen(port, () => {

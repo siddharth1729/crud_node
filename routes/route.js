@@ -1,5 +1,5 @@
 const express = require("express");
-const student_Act = require("../controllers/students");
+const student_Act = require("../controllers/studentController");
 const router = express.Router();
 router.get('/', student_Act.getStudents);
 router.get('/:roll', student_Act.getspecStudent);
